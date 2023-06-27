@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "gsap": "^3.12.1",
+    "three": "^0.153.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.0.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "gh-pages": "^5.0.0",
+    "vite": "^4.3.9"
+  }
+}

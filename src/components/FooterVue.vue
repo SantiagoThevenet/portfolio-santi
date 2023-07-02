@@ -16,9 +16,7 @@
         </a>
       </div>
     </div>
-    
   </footer>
-  <div id="ball"></div>
 </template>
 
 <script>

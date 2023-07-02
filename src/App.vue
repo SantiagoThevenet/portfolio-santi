@@ -1,11 +1,14 @@
 
 <template>
   <router-view />
+  <div id="ball"></div>
+
 </template>
 <script setup>
 </script>
 
 <style>
+
 html {
   scroll-behavior: smooth;
 }
@@ -17,7 +20,6 @@ html {
   color: white;
   list-style: none;
   font-family: "Inter", sans-serif;
-  cursor: none;
 }
 
 @keyframes textShine {
@@ -41,15 +43,19 @@ html {
   width: 100%;
   height: 15vh;
   min-width: 5rem;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
   background: black;
   display: flex;
-  flex-flow: row nowrap;
   justify-content: center;
-  gap: 3rem;
-  align-items: center;
 }
-
+.header .headerdiv{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 85%;
+  align-items: center;
+  
+}
 .header .ul {
   display: flex;
   align-items: start;
@@ -120,22 +126,35 @@ html {
   width: 100%;
   gap: 1rem;
 }
+.grid_full *{
+  color: #102d2e !important;
+}
+.grid_full a{
+  background: rgb(56, 56, 56) !important;
+  color: white !important;
+}
+.grid_full a:hover{
+  background: rgb(80, 80, 80) !important;
+}
 
 .main_grid .grid_full,
 .grid_half {
   align-items: flex-start;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   border-radius: 32px;
   color: #242424;
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
-  padding: 32px 32px 24px;
+  padding: 24px 24px;
   width: calc(50% - 16px);
   will-change: transform;
 }
 .main_grid .grid_half:nth-child(3) {
-  background-color: #8accd4;
+  background-color: #ffffff;
+}
+.main_grid .grid_half:nth-child(3) p {
+  color: black;
 }
 .main_grid .grid_half:nth-child(3) .grid_buttons a {
   background-color: #151f20;
@@ -149,12 +168,24 @@ html {
 }
 
 .main_grid .grid_half {
-  background: #a2f6cf;
+  background: #221f25;
 }
 
 .main_grid .grid_full *,
 .grid_half * {
-  color: #0f270c;
+  color: #dfdfdf;
+}
+.grid_half:nth-child(3) img{
+  filter: blur(4px);
+}
+.grid_half:nth-child(3) *{
+  color: #102d2e;  
+}
+
+
+.main_grid .grid_full *,
+.grid_half * {
+  color: #dfdfdf;
 }
 .main_grid .grid_half .grid_buttons {
   display: flex;
@@ -173,6 +204,15 @@ html {
   font-weight: 500;
   transition: 0.3s;
 }
+.a_half:nth-child(2){
+  background: none !important;
+  border: 1px solid rgb(131, 131, 131);
+}
+.a_full:nth-child(2){
+  background: none !important;
+  border: 1px solid rgb(71, 71, 71);
+  color: #102d2e !important;
+}
 .main_grid .grid_full .grid_buttons .a_full {
   padding: 1rem 2rem;
 }
@@ -187,10 +227,17 @@ html {
   background: #2c2c2c;
 }
 .main_grid .grid_half .grid_buttons .a_half {
-  background: #1b3817;
+  background: #3f3f3f;
+
+}
+.main_grid .grid_half .grid_buttons .a_half:nth-child(2):hover {
+  background: #575757 !important;
+}
+.main_grid .grid_half .grid_buttons .a_half:nth-child(2) {
+  border: 1px solid #575757 !important;
 }
 .main_grid .grid_half .grid_buttons .a_half:hover {
-  background: #2c4e27;
+  background: #575757;
 }
 .grid_half .a_half2 {
   background: #102d2e !important;
@@ -198,6 +245,10 @@ html {
 
 .main_grid .grid_full .grid_buttons .a_full:hover {
   background: #555555;
+}
+.main_grid .grid_full .grid_buttons .a_full:nth-child(2):hover {
+  background: #2c2c2c !important;
+  color: white !important;
 }
 
 .main_grid .grid_full .hr_grid,
@@ -211,6 +262,18 @@ html {
   margin-bottom: auto;
   width: 100%;
 }
+
+.grid_half .img_half,
+.grid_full .img_half{
+  border-radius: 1rem;
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 2rem;
+}
+.grid_half .img_half:last-child{
+  filter: blur(4px);
+}
+
 
 .trabajo-titulo {
   display: flex;
@@ -283,6 +346,7 @@ html {
 }
 
 .footer .section_footer {
+  background: black;
   display: flex;
   border-top: 1px solid #6b6b6b;
   width: 85%;
@@ -310,15 +374,14 @@ html {
 }
 
 #ball {
-  width: 20px;
-  height: 20px;
-  background: none;
+  width: 5px;
+  height: 5px;
+  background: white;
   border: 1px solid grey;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -10px 0 0 -10px;
   pointer-events: none;
 }
 
@@ -473,7 +536,7 @@ p {
 }
 .project {
   display: flex;
-  width: 84%;
+  width: 85%;
 }
 .project_information {
   width: 70%;
@@ -588,20 +651,25 @@ p {
 }
 
 #ball {
-  width: 20px;
-  height: 20px;
-  background: nome;
-  border: 1px solid grey;
-  border-radius: 50%;
-  position: absolute;
+  position: fixed;
+  background: none;
   top: 50%;
   left: 50%;
-  margin: -10px 0 0 -10px;
-  pointer-events: none;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  pointer-events: none; 
+  z-index: 9999;
 }
+
 .menu_icon {
   visibility: hidden;
   position: absolute;
+}
+
+.fa-x {
+  display: none;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -619,7 +687,13 @@ p {
     color: #f2f2f2;
   }
 
-
+  .fa-x {
+    display: flex;
+    position: absolute;
+    top: 4%;
+    left: 90%;
+    font-size: 2rem;
+  }
   .nav.active {
     transform: translateX(0%);
   }
@@ -658,12 +732,5 @@ p {
   .h3_education {
     margin-top: 2rem;
   }
-}
-
-.fa-x {
-  position: absolute;
-  top: 4%;
-  left: 90%;
-  font-size: 2rem;
 }
 </style>

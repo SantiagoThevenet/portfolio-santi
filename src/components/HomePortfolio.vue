@@ -34,6 +34,7 @@
       <h2 class="h2">Works</h2>
       <div class="main_grid">
         <div class="grid_full hidden">
+          <img src="/src/assets/img/balubackground.png" class="img_half" alt="">
           <div class="trabajo-titulo">
             <figure>
               <img
@@ -63,13 +64,13 @@
             <router-link
               title="View Balu Auctions"
               class="a_full"
-              target="_blank"
               to="/baluAuctions"
               >View Project
             </router-link>
           </div>
         </div>
         <div class="grid_half hidden">
+          <img src="/src/assets/img/minesweeper.png" class="img_half" alt="">
           <div class="trabajo-titulo">
             <i class="fa-solid fa-bomb"></i>
             <h3 class="h3_trabajo">Minesweeper</h3>
@@ -91,13 +92,13 @@
             <router-link
               title="View Minesweeper"
               class="a_half"
-              target="_blank"
               to="/minesweeper"
               >View Project
             </router-link>
           </div>
         </div>
         <div class="grid_half hidden">
+          <img src="/src/assets/img/marketplace.png" class="img_half" alt="">
           <div class="trabajo-titulo">
             <i class="fa-solid fa-store"></i>
             <h3 class="h3_trabajo">Marketplace</h3>
@@ -168,18 +169,17 @@
     </section>
   </main>
   <FooterVue></FooterVue>
-  <router-view/>
+  <router-view />
 </template>
 <script>
-import HeaderVue from '/src/components/HeaderVue.vue'
-import FooterVue from '/src/components/FooterVue.vue'
+import HeaderVue from "/src/components/HeaderVue.vue";
+import FooterVue from "/src/components/FooterVue.vue";
 export default {
   components: {
     HeaderVue,
-    FooterVue
-  }
-}
+    FooterVue,
+  },
+};
 </script>
 <style>
-
 </style>

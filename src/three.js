@@ -2,16 +2,14 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import gsap from 'gsap';
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const initScene = () => {
     const scene = new THREE.Scene();
-    const texture = new THREE.TextureLoader().load('/src/assets/img/earth.jpg');
+    const texture = new THREE.TextureLoader().load('/portfolio-santi/src/assets/img/earth.jpg');
     const geometry = new THREE.SphereGeometry(6, 64, 64);
-
     const material = new THREE.MeshStandardMaterial({
       color: "#fff",
-      roughness: 0.2,
+      roughness: 0.1,
       map: texture
     });
 
@@ -22,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
       width: window.innerWidth < 650 ? 350 : 600,
       height: window.innerWidth < 650 ? 350 : 600
     };
-
 
     const resizeSphere = () => {
       if (window.innerWidth < 650) {
@@ -51,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     light.intensity = 1;
     scene.add(light);
 
-    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 1, 100);
     camera.position.z = 20;
     scene.add(camera);
 
@@ -70,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const loop = () => {
       controls.update();
+      mesh.rotation.y -= .005; // Rota la esfera alrededor de su eje y
       renderer.render(scene, camera);
       window.requestAnimationFrame(loop);
     };
@@ -80,5 +78,4 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   initScene();
-
 });

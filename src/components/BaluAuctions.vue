@@ -43,7 +43,7 @@
   <router-view />
 </template>
   <script>
-import HeaderVueExterno from '/src/components/HeaderVueExterno.vue'
+import HeaderVueExterno from "/src/components/HeaderVueExterno.vue";
 import FooterVue from "/src/components/FooterVue.vue";
 export default {
   name: "BaluAuctions",
@@ -51,86 +51,84 @@ export default {
     HeaderVueExterno,
     FooterVue,
   },
+  mounted() {
+    window.scrollTo({
+      top: 0,
+    });
+  },
 };
 </script>
 <style scoped>
-.main{
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+.main {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
-.header .hr{
-    width: 60% !important;
-    border-color: #6b6b6b;
-}
-.footer{
-    padding-top: 2rem;
+.header .hr {
+  width: 60% !important;
+  border-color: #6b6b6b;
 }
 
-.footer .section_footer{
-    width: 85% !important;
+.footer .section_footer {
+  width: 85% !important;
 }
 @media only screen and (max-width: 700px) {
-    h2{
-        font-size: 2.5rem !important;
-    }
+  h2 {
+    font-size: 2.5rem !important;
+  }
 }
 @media only screen and (max-width: 1000px) {
-    .menu_icon{
-        visibility: visible;
-        position: relative;
-    }
-    
-    #ball {
-        display: none;
-    }
+  .menu_icon {
+    visibility: visible;
+    position: relative;
+  }
 
-    .menu_icon i {
-        font-size: 1.8rem;
-        color: #f2f2f2;
-    }
-    
-    .nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 999;
-        width: 100%;
-    }
+  .menu_icon i {
+    font-size: 1.8rem;
+    color: #f2f2f2;
+  }
 
-    .ul {
-        flex-direction: column;
-        gap: 3rem;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, +70%);
-        background-color: black;
-        width: 100%;
-    }
-    .nav.active {
-        transform: translateX(0%);
-    }
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    width: 100%;
+  }
 
-    footer .section_footer{
-        width: 80%;
-    }
-    p{
-        width: 100%;
-    }
+  .ul {
+    flex-direction: column;
+    gap: 3rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, +70%);
+    background-color: black;
+    width: 100%;
+  }
+  .nav.active {
+    transform: translateX(0%);
+  }
+
+  footer .section_footer {
+    width: 80%;
+  }
+  p {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
-    video {
-        margin-top: 1rem;
-    }
-    .project{
-        flex-direction: column;
-    }
+  video {
+    margin-top: 1rem;
+  }
+  .project {
+    flex-direction: column;
+  }
 }
 </style>
   

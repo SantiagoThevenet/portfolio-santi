@@ -106,7 +106,7 @@
           <span>2023</span>
           <hr class="hr_grid" />
           <p class="p_grid">
-            I am currently building a marketplace using React and Django. Stay
+            I am currently building a marketplace. Stay
             tuned for its upcoming launch.
           </p>
           <div class="grid_buttons">

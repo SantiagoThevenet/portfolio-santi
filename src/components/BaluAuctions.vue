@@ -11,7 +11,7 @@
           <h4>Overview</h4>
           <p>
             "Balú Auctions" is a modern online auction platform that aims to
-            make online bidding more popular and exciting. Our goal is to
+            make online bidding more popular and exciting. The goal is to
             provide users with a simple and easy-to-use experience, where they
             can enjoy the fun of bidding on unique items and getting them at
             great prices. With a user-friendly interface, we want to create a

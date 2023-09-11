@@ -51,7 +51,7 @@
             "Balú Auctions" is my final project for my DAW (Development of Web
             Applications) course. It is a modern online auction platform that
             aims to make online bidding more popular and excitingthat uses
-            Vue.js, ExpressJS, MySQL, and SASS.
+            <b>Vue.js</b>, <b>ExpressJS</b>, <b>MySQL</b>, and <b>SASS</b>.
           </p>
           <div class="grid_buttons">
             <a
@@ -78,7 +78,7 @@
           <span>2023</span>
           <hr class="hr_grid" />
           <p class="p_grid">
-            I have created my own Python version of the classic Minesweeper
+            I have created my own <b>Python</b> version of the classic Minesweeper
             game, which was originally developed in 1989.
           </p>
           <div class="grid_buttons">
@@ -98,19 +98,31 @@
           </div>
         </div>
         <div class="grid_half hidden">
-          <img src="/src/assets/img/marketplace.png" class="img_half" alt="">
+          <img src="/src/assets/img/fittrak.jpg" class="img_half" alt="">
           <div class="trabajo-titulo">
-            <i class="fa-solid fa-store"></i>
-            <h3 class="h3_trabajo">Marketplace</h3>
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3 class="h3_trabajo">FitTrak</h3>
           </div>
           <span>2023</span>
           <hr class="hr_grid" />
           <p class="p_grid">
-            I am currently building a marketplace. Stay
-            tuned for its upcoming launch.
+            Fittraker, developed using <b>React</b>, <b>ExpressJS</b>, <b>MongoDB</b>,and <b>Tailwind CSS</b>, connects you to the WGER API to craft custom gym routines
           </p>
           <div class="grid_buttons">
-            <span class="a_half a_half2">Currently Working</span>
+            <a
+              title="View Balu Auctions on github"
+              class="a_half2_1"
+              target="_blank"
+              href="https://github.com/SantiagoThevenet/FitTrackClient"
+              >View on Github</a
+            >
+            <router-link
+              title="View Balu Auctions"
+              class="a_half2_2"
+              to="/fittraker"
+              >View Project
+            </router-link>
+
           </div>
         </div>
       </div>

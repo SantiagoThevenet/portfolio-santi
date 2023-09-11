@@ -158,9 +158,21 @@ html {
 }
 .main_grid .grid_half:nth-child(3) .grid_buttons a {
   background-color: #151f20;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  transition: .3s;
+}
+.main_grid .grid_half:nth-child(3) .grid_buttons a:last-child {
+  background: none;
+  color: black;
 }
 .main_grid .grid_half:nth-child(3) .grid_buttons a:hover {
-  background-color: #7a9396;
+  background-color: #2c4142;
+}
+.main_grid .grid_half:nth-child(3) .grid_buttons a:last-child:hover {
+  background-color: #151f20;
+  color: white;
 }
 
 .main_grid .grid_full {
@@ -175,9 +187,7 @@ html {
 .grid_half * {
   color: #dfdfdf;
 }
-.grid_half:nth-child(3) img{
-  filter: blur(4px);
-}
+
 .grid_half:nth-child(3) *{
   color: #102d2e;  
 }
@@ -239,8 +249,12 @@ html {
 .main_grid .grid_half .grid_buttons .a_half:hover {
   background: #575757;
 }
-.grid_half .a_half2 {
-  background: #102d2e !important;
+.grid_buttons .a_half2_1 {
+  border: 1px solid #575757;
+
+}
+.grid_buttons .a_half2_2 {
+  border: 1px solid #575757;
 }
 
 .main_grid .grid_full .grid_buttons .a_full:hover {
@@ -269,9 +283,6 @@ html {
   max-width: 100%;
   max-height: 100%;
   margin-bottom: 2rem;
-}
-.grid_half .img_half:last-child{
-  filter: blur(4px);
 }
 
 

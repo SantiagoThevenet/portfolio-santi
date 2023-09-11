@@ -3,7 +3,7 @@ import HomePortfolio from "/src/components/HomePortfolio.vue";
 import Minesweeper from "/src/components/MinesweeperProject.vue";
 import BaluAuctions from "/src/components/BaluAuctions.vue";
 import ResumeProtfolio from "/src/components/ResumeProtfolio.vue";
-
+import FitTrackerProject from "/src/components/FitTrackerProject.vue"
 const routes = [
   {
     path: "/",
@@ -19,6 +19,11 @@ const routes = [
     path: "/baluAuctions",
     name: "BaluAuctions",
     component: BaluAuctions,
+  },
+  {
+    path: "/fittraker",
+    name: "Fittraker",
+    component: FitTrackerProject,
   },
   {
     path: "/resume",

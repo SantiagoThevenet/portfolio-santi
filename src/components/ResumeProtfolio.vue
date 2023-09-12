@@ -13,10 +13,11 @@
             <ul class="resumeul">
               <li class="li">Python</li>
               <li class="li">Node.js</li>
+              <li class="li">Express JS</li>
               <li class="li">Django</li>
               <li class="li">Django REST</li>
-              <li class="li">Express JS</li>
               <li class="li">Mysql</li>
+              <li class="li">MongoDB</li>
               <li class="li">PostgresDB</li>
             </ul>
           </div>
@@ -25,8 +26,8 @@
             <ul class="resumeul">
               <li class="li">HTML5 & CSS3</li>
               <li class="li">JavaScript</li>
-              <li class="li">Vue 2/3</li>
-              <li class="li">Nuxt 2</li>
+              <li class="li">Vue</li>
+              <li class="li">React</li>
               <li class="li">SASS & SCSS</li>
               <li class="li">Tailwind</li>
               <li class="li">Boostrap</li>
